@@ -1,24 +1,40 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column             | Type   | Options                 |
+| ------------------ | ------ | ----------------------- |
+| email              | string | null: false,unique: true|
+| encrypted_password | string | null: false             |
+| nickname           | string | null: false             |
 
-* Ruby version
 
-* System dependencies
+### Association
 
-* Configuration
+- has_many :comments
+- has_many :cosmes
 
-* Database creation
+## cosmes テーブル
 
-* Database initialization
+| Column       | Type       | Options                       |
+| ------------ | ---------- | ----------------------------- |
+| text         | text       | null: false                   |
+| user         | references | null: false,foreign_key: true |
+| category_id  | integer    | null: false                   |
 
-* How to run the test suite
+### Association
+- belongs_to :user
+- has_many :comments
 
-* Services (job queues, cache servers, search engines, etc.)
+## comments テーブル
 
-* Deployment instructions
+| Column      | Type      | Options                       |
+| ----------- | --------- | ----------------------------- |
+| text        | text      | null: false                   |
+| user        | references| null: false,foreign_key: true |
+| cosme       | references| null: false,foreign_key: true |
 
-* ...
+### Association
+
+- belongs_to :user
+- belongs_to :cosme
