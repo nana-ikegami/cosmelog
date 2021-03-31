@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="example.css">
     <head> 
     <title>Cosmelog</title>
     <%= csrf_meta_tags %>
@@ -16,13 +15,13 @@
 <!-- header -->
   <header>
   	<h1 class="headline">
-      <a>cosme log</a>
+    <%= link_to "cosmelog", root_path, class: :nav_listitem %>
     </h1>
      <div class="nav_list">
       <div class="nav_listitem">
-      </div>
       <%= link_to "ログイン", class: :nav_listitem %>
       <%= link_to "新規登録", class: :nav_listitem %>
+      </div>
     </div>
   </header>
 <!-- サイトの中身部分 -->
@@ -30,7 +29,7 @@
   <footer>
     <ul class="footer-menu">
     </ul>
-    <p>© All rights reserved by nana ilegami </p>
+    <p>© All rights reserved by nana ikegami </p>
   </footer>
 </body>
 </html>

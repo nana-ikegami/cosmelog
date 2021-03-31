@@ -16,16 +16,28 @@ header .headline{
 }
 .nav_list {
     line-height: 100px;
-    float: left;
     margin-left: 30px;
+    display: flex;
+    justify-content: flex-end;
 }
+.nav_listitem a{
+    text-decoration: none;
+    font-family: 'Train One', cursive;
+    color: white;
+  }
+
+.headline a{
+    text-decoration: none;
+    font-family: 'Train One', cursive;
+    color: white;
+  }
+
 .nav_listitem {
   display: inline-block;
   margin: 0 20px;
-}
-
-.headline {
-  font-family: 'Train One', cursive;
+  display: flex;
+  justify-content: space-around;
+  width:30%;
 }
 
 footer{
