@@ -20,7 +20,6 @@
 | ------------ | ---------- | ----------------------------- |
 | text         | text       | null: false                   |
 | user         | references | null: false,foreign_key: true |
-| category_id  | integer    | null: false                   |
 
 ### Association
 - belongs_to :user
